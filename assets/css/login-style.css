@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Carattere&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&family=Sofadi+One&display=swap');
+
+body{
+    background-color: #003f5c;
+    font-family: "Open Sans", 'Courier New', Courier, monospace;
+}
+#logo{
+    width: 150px;
+    height: 80px;
+    margin: 0px;
+    padding: 0.5em 0em 0em 0.5em;
+}
+body .login-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  font-family: "Open Sans", 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 2em;
+  background-color: #00324A;
+  border-radius: 10px;
+}
+.login-box h2{
+    font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+}
+.login-box form section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Center children horizontally */
+  justify-content: center;  
+  padding: 1.5em 2em;
+  margin: 2em auto;          /* Center section itself inside login-box */
+  text-align: left;
+  max-width: 400px;
+}
+section .login-form-input{
+    margin-bottom: 1em;
+}
+section .login-form-input label{
+    display: block;
+    margin-bottom: 0.5em;
+}
+section .login-form-input input{
+ height: 2em;
+  width: 18em;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  background-color: #2d5772;
+  color: aliceblue;
+  padding-left: 15px;
+  border-radius: 2px;
+}
+
+/* login buttons styles */
+.single-login-btn{
+    background-color: #ede7d1;
+    color: #003f5c;
+    font-weight: bold;
+    padding: 0.7em 2.5em;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1.5px solid #bdb07f;
+    border-radius: 2px;
+    outline: none;
+}
+.single-login-btn:hover{
+    color: #bdb07f;
+    transition: color 0.2s ease-in;
+}
+.login-buttons-div{ /* this is the entire div part for buttons */
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+
+} 
+.error-box{
+  color: rgb(200, 24, 24);
+  font-weight: normal;
+  margin-bottom: 15px;
+
+}
+/* ---------- RESPONSIVE: TABLET ---------- */
+@media (max-width: 1024px) {
+  body .login-box {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 3em auto;
+    width: 90%;
+    max-width: 480px;
+    padding: 1.5em;
+  }
+
+  .login-box form section {
+    max-width: none;
+    width: 100%;
+    padding: 1em 0;
+    margin: 1em 0;
+  }
+
+  section .login-form-input input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Buttons: stay side-by-side */
+  .login-buttons-div {
+    top: 0;                 /* remove negative offset */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.75em;
+    flex-wrap: nowrap;      /* keep on one row for tablet */
+  }
+
+  .single-login-btn {
+    flex: 1 1 0;            /* share available space equally */
+    min-width: 140px;       /* maintain tap target */
+    padding: 0.7em 1.2em;
+    white-space: nowrap;    /* prevent text wrapping */
+  }
+
+  #logo {
+    width: 130px;
+    height: auto;
+    padding-left: 0.5em;
+  }
+}
+
+/* ---------- RESPONSIVE: MOBILE ---------- */
+@media (max-width: 600px) {
+  body {
+    padding: 0 0.75em;
+    box-sizing: border-box;
+  }
+
+  body .login-box {
+    margin: 2em auto;
+    width: 100%;
+    max-width: 420px;
+    padding: 1.25em;
+    text-align: left;
+  }
+
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  .error-box {
+    margin-bottom: 0.75em;
+    text-align: center;
+  }
+
+  .login-box form section {
+    padding: 0.5em 0;
+    margin: 0.5em 0 1em;
+    align-items: stretch;
+  }
+
+  section .login-form-input {
+    width: 100%;
+    margin-bottom: 0.75em;
+  }
+
+  section .login-form-input input {
+    height: 2.4em;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    font-size: 16px;
+  }
+
+  /* Buttons: still side-by-side; allow wrap if super narrow */
+  .login-buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.6em;
+    flex-wrap: wrap;             /* only wraps on very small widths */
+  }
+
+  .single-login-btn {
+    flex: 1 1 calc(50% - 0.6em); /* two equal columns */
+    max-width: 260px;            /* prevents overly wide buttons */
+    min-width: 140px;            /* keeps tap target size */
+    padding: 0.8em 1em;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  #logo {
+    width: 115px;
+    height: auto;
+    padding: 0.5em;
+  }
+}

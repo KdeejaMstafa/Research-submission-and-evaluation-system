@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Carattere&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&family=Sofadi+One&display=swap');
+
+body{
+  background-color: #003f5c;
+}
+#logo{
+  width: 150px;
+  height: 80px;
+  margin: 0px;
+  padding: 0.5em 0em 0em 0.5em;
+}
+body .signup-box{
+  color: aliceblue;
+  text-align: center;
+  font-size: normal;
+  font-family: "open sans", 'Courier New', 'Courier New', Courier, monospace;
+  margin-top: -3em;
+}
+
+.signup-box h2{
+  font-family:"Libre Baskerville", serif, 'Courier New', Courier, monospace;
+}
+#signup-error-msg{
+  color: rgb(195, 29, 62);
+}
+form .role-toggle {
+  padding:2em;
+  display: flex;
+  justify-content: center; /* centers label and role-options inside */
+  align-items: center;
+  gap: 10px;
+}
+.role-options input[type="radio"] {
+  display: none; /* Hide the actual radio buttons */
+}
+.role-btn{
+  margin-right: 12px;
+  padding: 11px 23px;
+  border: 1.5px solid aliceblue;
+  border-radius: 2px;
+  background-color:#2d5772;
+  color:aliceblue;
+  cursor: pointer;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+.role-options input[type="radio"]:checked + .role-btn {
+  border: 1.5px solid  #05364d;
+  background-color: #ede7d1;
+  color: #003f5c;
+  font-weight: bold;
+}
+
+/* ---- The inputs field ---- */
+form .contner-fr-inputs{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2em;
+ padding: 2em 8em;
+}
+form .contner-fr-inputs .form-input-div{ /* the label and input both are in this */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.form-input-div label{
+  text-align: left;
+  display: block;
+  margin-bottom: 0.3em;
+}
+.form-input-div 
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"]{
+  height: 2em;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #2d5772;
+  color: aliceblue;
+}
+.form-input-div .checkbox-options{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* to make sure it is 3 columns */
+  gap: 10px; /* spacing between items */
+  font-size: normal;
+}
+.checkbox-item{
+    width: 100%;
+}
+/* ---- Sign Up Buttons ---- */
+.signup-buttons-div{
+margin-top: -1em;
+margin-bottom: 2em;
+}
+.reg-btn{
+  margin-left:1em;
+  background-color: #ede7d1;
+  color: #003f5c;
+  font-weight: bold;
+  padding: 11px 25px;
+  font-size: normal;
+  cursor: pointer;
+  border: none;
+  outline: none; 
+}
+.reg-btn:hover{
+    color: #bdb07f;
+    transition: color 0.2s ease-in;
+}
+
+/* ---------- SIGN UP SUCCESS PAGE ---------- */
+.h2-signup-success-msg{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 3em;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.signup-success-redirect-msg{
+    color: aliceblue;
+    text-align: center;
+    font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.to-login-page{
+    color: #ede7d1;
+    text-decoration: none;
+}
+
+/* ---------- RESPONSIVE: TABLET ---------- */
+@media (max-width: 1024px) {
+  /* Container and spacing */
+  .signup-box {
+    margin-top: 0;                 /* neutralize negative margin on smaller screens */
+    padding: 0 2em;
+  }
+  .signup-box * {
+    box-sizing: border-box;
+  }
+
+  /* Role toggle: tighten spacing */
+  form .role-toggle {
+    padding: 1.2em;
+    flex-wrap: wrap;
+    gap: 0.75em;
+  }
+  .role-btn {
+    padding: 10px 20px;
+  }
+
+  /* Inputs grid: keep two columns, reduce horizontal padding */
+  form .contner-fr-inputs {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    padding: 1.5em 2em;            /* was 2em 8em */
+  }
+
+  /* Inputs fill available width */
+  .form-input-div input[type="text"],
+  .form-input-div input[type="number"],
+  .form-input-div input[type="email"],
+  .form-input-div input[type="password"] {
+    width: 100%;
+  }
+
+  /* Expertise checkboxes: 2 columns on tablet */
+  .form-input-div .checkbox-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Buttons stay side-by-side */
+  .signup-buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8em;
+    margin-top: 0.5em;
+  }
+  .reg-btn {
+    flex: 0 1 auto;
+    min-width: 140px;
+    white-space: nowrap;
+  }
+
+  /* Logo scales */
+  #logo {
+    width: 130px;
+    height: auto;
+    padding-left: 0.5em;
+  }
+}
+
+/* ---------- RESPONSIVE: MOBILE ---------- */
+@media (max-width: 600px) {
+  /* Container and spacing */
+  body {
+    padding: 0 0.75em;
+  }
+  .signup-box {
+    padding: 0 0.5em;
+    text-align: left;
+  }
+  .signup-box h2 {
+    text-align: center;
+    margin-bottom: 0.25em;
+  }
+  #signup-error-msg {
+    margin: 0.5em 0 1em;
+    text-align: center;
+  }
+
+  /* Role toggle: stack label and options */
+  form .role-toggle {
+    padding: 1em 0.5em;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .role-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    justify-content: center;
+  }
+  .role-btn {
+    padding: 10px 18px;
+  }
+
+  /* Inputs grid: single column, compact padding */
+  form .contner-fr-inputs {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em 0.5em;
+  }
+  .form-input-div {
+    margin-bottom: 1em;
+  }
+  .form-input-div input[type="text"],
+  .form-input-div input[type="number"],
+  .form-input-div input[type="email"],
+  .form-input-div input[type="password"] {
+    width: 100%;
+    height: 2.4em;
+    padding: 0 12px;
+    font-size: 16px;
+  }
+
+  /* Expertise checkboxes: 1 column for readability */
+  .form-input-div .checkbox-options {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
+  /* Buttons: keep side-by-side; allow wrap only on very narrow screens */
+  .signup-buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.6em;
+    margin-top: 0.75em;
+    flex-wrap: wrap;               /* wrap only if extremely narrow */
+  }
+  .reg-btn {
+    flex: 1 1 calc(50% - 0.6em);   /* two equal columns */
+    min-width: 140px;
+    max-width: 240px;
+    padding: 11px 18px;
+    font-size: 16px;
+  }
+
+  /* Logo compact */
+  #logo {
+    width: 115px;
+    height: auto;
+    padding: 0.5em;
+  }
+}

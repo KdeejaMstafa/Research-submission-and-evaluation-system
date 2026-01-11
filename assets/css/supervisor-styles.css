@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Carattere&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&family=Sofadi+One&display=swap');
+
+body{
+  margin: auto; /* this removed the white space around the nav bar */
+  padding: auto;
+} 
+.sup-sidebar{
+  background-color: #003f5c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  color: aliceblue;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.sup-sidebar .sup-nav-links ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sup-sidebar .sup-nav-links ul li{
+  margin: 15px 0;
+}
+.sup-sidebar .sup-nav-links ul li a{
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+.sup-sidebar .sup-nav-links ul li a:hover{
+  color:#ede7d1;
+  transition: color 0.3s ease-in;
+}
+.sup-sidebar .sup-profile-div img{
+  margin: 0px;
+  padding: 0.5em;
+  width: 65px;
+  height: 65px;
+  background-color: #196385;
+  border-radius: 100%;
+}
+.sup-sidebar .sup-profile-div div a{
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.sup-sidebar .sup-profile-div div a:hover{
+  color:#ede7d1;
+  transition: color 0.3s ease-in;
+}
+.sup-profile-div{
+  display: flex;
+  align-items: center; /* vertically center the items */
+  gap: 2px; /* space between image and link */
+  padding: 15px 20px;
+}
+.sup-logo-div{
+  position: absolute;
+  bottom: 10px; /* distance from bottom edge */
+  left: 50%;
+  transform: translateX(-50%); /* centers horizontally */
+  text-align: center;
+}
+.sup-logo-div img{
+  width: 150px;
+  height: auto;
+  opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+}
+
+/*---------- SUPERVISOR DASHBOARD STYLES ----------*/
+
+.sup-main-page{
+  margin-left: 220px; /* same as sidebar width */
+  padding: 1.5em;
+  background-color: #f0ebdc;;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full viewport height */
+  box-sizing: border-box;
+  position: relative;
+}
+.top-elements {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.sup-main-page .sup-notif-sec{
+  padding: 13px;
+  flex: 2;
+  background-color: #488aa8;
+  border-radius: 3px;
+  color:#003f5c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.display-notif-sup ul {
+font-family: "open sans",'Courier New', Courier, monospace;
+padding: 0; 
+margin-left: 1em; 
+font-size: 15px;
+}
+h3{
+font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+color: #003f5c;
+}
+.sup-options-list{
+  flex: 1;
+  background-color: #488aa8;
+  color:#003f5c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 1.5em 2em;
+  font-family: "open sans",'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+.sup-options-list a{
+  background-color: #06435f;
+  border-radius: 3px;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.sup-options-list a:hover{
+  background-color: #16516c;
+}
+
+/* ---------- THE TABLE ----------*/
+.sup-evaluation-table-sec{
+  margin-top: auto; /* pushes it to the bottom */
+  padding: 1em;
+  background-color:#faf7e9ff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  color:#003f5c;
+}
+.sup-evaluation-table-sec table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.sup-evaluation-table-sec th, .sup-evaluation-table-sec td{
+  border: none; /* removes boxy borders */
+  border-bottom: 1px solid #003366; /* dark blue line under each row */
+  padding: 7px;
+  text-align: center;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: small;
+}
+.action-btn {
+  padding: 4px 10px;
+  font-size: 13px;
+  border: none;
+  background-color: #06435f;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.action-btn:hover {
+  background-color: #16516c;
+}
+.btns-view-and-eval{
+  position: relative;
+  left: 8px;
+}
+.btns-view-and-eval a{
+  text-decoration: none;
+}
+
+/* ------------ CREATE ASSIGNMENT PAGE ------------ */
+.assignment-form-container{
+  background-color: #16516c;
+  color: aliceblue;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin: 0em 7em;
+  padding: 2em 3em;
+
+}
+.assignment-form-container h2{
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+  letter-spacing:1px;
+}
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.create-as-btns{
+  display: flex;
+  gap: 12px;
+  margin: 0em 10em;
+}
+.form-grid button{
+  font-size: normal;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none; 
+  padding: 10px;
+  transition: background-color 0.2s ease-in;
+}
+.form-grid button:hover{
+ background-color: #bdd2db;
+}
+.assignment-form-container p{
+  text-align: center;
+  font-size: 17px;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+}
+
+/* ---------- VIEW ASSIGNMENTS PAGE (SUPERVISOR) ----------*/
+.assignment-list-container {
+  padding: 15px;
+}
+.back-btn-sup{
+  margin-bottom: 3px;
+  background-color: #00324A;
+  color: aliceblue;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn-sup:hover {
+  background-color: #0d4d6b;
+}
+
+
+.assignment-list-container h2{
+  text-align: left;
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+  color: #00324A;
+}
+
+.assignment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+.assignment-table thead{
+  color:aliceblue;
+  text-align: left;
+}
+.assignment-table th,
+.assignment-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header row */
+.assignment-table th:nth-child(odd) {
+  background-color: #003f5c; /* lighter blue */
+  font-weight: normal;
+}
+.assignment-table th:nth-child(even) {
+  background-color: #073950; /* darker blue */
+  font-weight: normal;
+}
+
+/* Column striping for data cells */
+.assignment-table td:nth-child(odd) {
+   background-color: white;   /* lighter shade */
+}
+.assignment-table td:nth-child(even) {
+ background-color: rgb(245, 243, 243);   /* dark shade */
+}
+
+.assignment-table a {
+  color: #007bff;
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
+  display: inline-block;
+}
+.assignment-table a:hover {
+  font-weight: 650;
+}
+/* ---------- EVALUATE ASSIGNMENT ---------- */
+.sup-eval-page .success-message{
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: #003f5c;
+}
+.sup-eval-page h2{
+text-align: left;
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+  color: #00324A;
+}
+.evaluation-container {
+  display: flex;
+  gap: 30px;
+  padding: 2em;
+  background-color: #faf7e9ff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+.eval-left, .eval-right {
+  flex: 1;
+}
+.eval-right {
+  padding: 1em;
+  border-radius: 3px;
+  height: 28em;
+}
+.eval-right h3 {
+  margin-top: 0;
+  color:  #00324A;
+  text-align: left;
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;}
+.eval-right ul {
+  padding-left: 1.2em;
+}
+.eval-form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+.eval-form select,
+.eval-form textarea,
+.eval-form input[type="file"] {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+.rating-label {
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse; /* flips visual order */
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 20px;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Fill stars from left to selected */
+.star-rating input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+.submit-btn, .back-btn {
+  margin-top: 1.5em;
+  padding: 8px 16px;
+  background-color: #06435f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit-btn:hover, .back-btn:hover {
+  background-color: #16516c;
+}
+.criteria-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  margin-top: 1em;
+  background-color: white;
+  border-radius: 3px; 
+  overflow: hidden;
+
+}
+
+.criteria-table th,
+.criteria-table td {
+  border: 1px solid #ccc; /* thin border around each cell */
+  padding: 8px;
+  text-align: left;
+}
+
+.criteria-table th {
+  color: #f0f0f0;
+  background-color: #003f5c;
+  font-weight: bold;
+}
+.eval-left p a{
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.eval-left p a:hover{
+  color: #2b7395;
+}
+
+/* ---------- RESPONSIVE DESIGN FOR SUPERVISOR DASHBOARD ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  /* Sidebar shrinks */
+  .sup-sidebar {
+    width: 180px;
+  }
+  .sup-main-page {
+    margin-left: 180px;
+    padding: 1em;
+  }
+
+  /* Dashboard sections stack vertically */
+  .top-elements {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Tables scroll horizontally if too wide */
+  .sup-evaluation-table-sec table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+  .sup-evaluation-table-sec th,
+  .sup-evaluation-table-sec td {
+    padding: 8px 10px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  /* Sidebar becomes top nav */
+  .sup-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .sup-profile-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+  }
+
+  .sup-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+
+  .sup-logo-div {
+    position: static;
+    transform: none;
+    margin-top: 1em;
+  }
+  .sup-logo-div img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Main page fills full width */
+  .sup-main-page {
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  /* Notifications and options stack */
+  .top-elements {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Tables become card-style */
+  .sup-evaluation-table-sec table thead {
+    display: none;
+  }
+  .sup-evaluation-table-sec table,
+  .sup-evaluation-table-sec tbody,
+  .sup-evaluation-table-sec tr,
+  .sup-evaluation-table-sec td {
+    display: block;
+    width: 100%;
+  }
+  .sup-evaluation-table-sec tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0.75em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .sup-evaluation-table-sec td {
+    padding: 0.5em 0;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    word-break: break-word;
+  }
+  .sup-evaluation-table-sec td::before {
+    display: block;
+    font-weight: bold;
+    color: #003f5c;
+    margin-bottom: 0.25em;
+  }
+
+  /* Labels for each column */
+  .sup-evaluation-table-sec td:nth-child(1)::before { content: "No."; }
+  .sup-evaluation-table-sec td:nth-child(2)::before { content: "Title"; }
+  .sup-evaluation-table-sec td:nth-child(3)::before { content: "Student Name"; }
+  .sup-evaluation-table-sec td:nth-child(4)::before { content: "Submission Date"; }
+  .sup-evaluation-table-sec td:nth-child(5)::before { content: "Status"; }
+  .sup-evaluation-table-sec td:nth-child(6)::before { content: "Evaluation"; }
+
+  /* Buttons inside cards */
+  .btns-view-and-eval {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .btns-view-and-eval button {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+}
+
+/* ---------- RESPONSIVE DESIGN FOR SUPERVISOR PAGES ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  /* Create Assignment form container */
+  .assignment-form-container {
+    margin: 1em;
+    padding: 1.5em;
+  }
+
+  .create-as-btns {
+    margin: 1em auto;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  /* Tables scroll horizontally */
+  .assignment-table,
+  .criteria-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+  .assignment-table th,
+  .assignment-table td,
+  .criteria-table th,
+  .criteria-table td {
+    padding: 8px 10px;
+  }
+
+  /* Evaluation container stacks vertically */
+  .evaluation-container {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1.5em;
+  }
+  .eval-right {
+    height: auto;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  /* Create Assignment form container */
+  .assignment-form-container {
+    margin: 0.5em;
+    padding: 1em;
+  }
+  .assignment-form-container h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .form-grid {
+    gap: 1em;
+  }
+  .form-grid input {
+    font-size: 15px;
+    height: 2.4em;
+  }
+
+  .create-as-btns {
+    margin: 1em 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.6em;
+  }
+  .create-as-btns button {
+    flex: 1 1 auto;
+    min-width: 120px;
+    font-size: 14px;
+  }
+
+  /* Assignment tables become card-style */
+  .assignment-table thead {
+    display: none;
+  }
+  .assignment-table,
+  .assignment-table tbody,
+  .assignment-table tr,
+  .assignment-table td {
+    display: block;
+    width: 100%;
+  }
+  .assignment-table tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0.75em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .assignment-table td {
+    padding: 0.5em 0;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    word-break: break-word;
+  }
+  .assignment-table td::before {
+    display: block;
+    font-weight: bold;
+    color: #003f5c;
+    margin-bottom: 0.25em;
+  }
+  /* Example labels (adjust to your actual columns) */
+  .assignment-table td:nth-child(1)::before { content: "Assignment ID"; }
+  .assignment-table td:nth-child(2)::before { content: "Title"; }
+  .assignment-table td:nth-child(3)::before { content: "Created By"; }
+  .assignment-table td:nth-child(4)::before { content: "Date"; }
+
+  /* Criteria table scrolls horizontally */
+  .criteria-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  /* Evaluation container stacks fully */
+  .evaluation-container {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+  .eval-left, .eval-right {
+    width: 100%;
+  }
+  .eval-right {
+    height: auto;
+    padding: 0.75em;
+  }
+  .eval-right h3 {
+    font-size: 16px;
+  }
+
+  /* Buttons */
+  .submit-btn, .back-btn {
+    width: 100%;
+    margin-top: 1em;
+    font-size: 15px;
+  }
+}

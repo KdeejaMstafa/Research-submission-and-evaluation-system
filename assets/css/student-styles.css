@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Carattere&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&family=Sofadi+One&display=swap');
+
+body{
+    margin: auto; /* this removed the white space around the nav bar */
+    padding: auto;
+} 
+
+/*---------- STUDENT NAVIGATION BAR STYLES ----------*/
+.student-sidebar{
+  background-color: #003f5c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  color: aliceblue;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.student-sidebar .student-nav-links ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.student-sidebar .student-nav-links ul li {
+  margin: 15px 0;
+}
+
+.student-sidebar .student-nav-links ul li a {
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+.student-sidebar .student-nav-links ul li a:hover {
+color:#ede7d1;
+transition: color 0.3s ease-in;
+}
+.student-sidebar .student-profile-div img{
+  margin: 0px;
+  padding: 0.5em;
+  width: 65px;
+  height: 65px;
+  background-color: #196385;
+  border-radius: 100%;
+}
+.student-sidebar .student-profile-div div a{
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.student-sidebar .student-profile-div div a:hover {
+color:#ede7d1;
+transition: color 0.3s ease-in;
+}
+.student-profile-div{
+  display: flex;
+  align-items: center; /* vertically center the items */
+  gap: 2px; /* space between image and link */
+  padding: 15px 20px;
+
+}
+.student-logo-div {
+  position: absolute;
+  bottom: 10px; /* distance from bottom edge */
+  left: 50%;
+  transform: translateX(-50%); /* centers horizontally */
+  text-align: center;
+}
+
+.student-logo-div img {
+  width: 150px;
+  height: auto;
+  opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+}
+/*---------- STUDENT DASHBOARD STYLES ----------*/
+
+.std-main-page{
+  margin-left: 220px; /* same as sidebar width */
+  padding: 1.5em;
+  background-color: #f0ebdc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures full viewport height */
+  box-sizing: border-box;
+  position: relative;
+}
+.top-elements {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.std-main-page .std-notif-sec{
+  padding: 13px;
+  flex: 2;
+  background-color: #488aa8;
+  border-radius: 3px;
+  color:#003f5c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.display-notif-std ul {
+font-family: "open sans",'Courier New', Courier, monospace; 
+margin-left: 1em; 
+font-size: 15px;
+padding-left: 0;
+}
+
+h3{
+font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+color: #003f5c;
+}
+
+.std-options-list{
+  flex: 1;
+  background-color: #488aa8;
+  color:#003f5c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 1.5em 2em;
+  font-family: "open sans",'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+.std-options-list a{
+  background-color: #06435f;
+  border-radius: 3px;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.std-options-list a:hover{
+  background-color: #16516c;
+}
+/* STUDETN TABLE STYLES (here i'm applying the same style of student submission table to the available assignments table) */
+.student-submission-table-sec  table .submit-btn{
+background-color: #06435f;
+color: aliceblue;
+border-radius: 3px;
+text-decoration: none;
+padding: 5px 10px;
+transition: background-color 0.3s ease;
+}
+.student-submission-table-sec  table .submit-btn:hover{
+background-color: #16516c;
+}
+
+.student-submission-table-sec, 
+.available-assignments-table-sec {
+  margin-top: auto; /* pushes it to the bottom */
+  padding: 1em;
+  background-color:#f7f3e4;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  color:#003f5c;
+}
+
+.student-submission-table-sec table, 
+.available-assignments-table-sec table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-submission-table-sec th,
+.student-submission-table-sec td,
+.available-assignments-table-sec th,
+.available-assignments-table-sec td {
+  border: none; /* removes boxy borders */
+  border-bottom: 1px solid #003366; /* dark blue line under each row */
+  padding: 10px;
+  text-align: center;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: small;
+}
+.status-submitted {
+  color: rgb(13, 125, 13);
+}
+.status-pending {
+  color: rgb(183, 22, 54);
+}
+
+/*---------- VIEW AVAILABLE ASSIGNMENTS ----------*/
+.assignment-list-container h3{
+  text-align: center;
+}
+.assignment-list-container .assignment-msges, .std-submit-msg-area{
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.success-msg{
+  color: #16516c;
+}
+.warning-msg{
+  color: rgb(192, 30, 62);
+}
+.select-assignment-btn{
+  background-color: #06435f;
+  color: aliceblue;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 6px 11px;
+  transition: background-color 0.3s ease;
+  border: none;
+  font-size: small;
+}
+.select-assignment-btn:hover{
+  background-color: #16516c;
+}
+.assignment-download-link{
+  color: #007bff;
+  text-decoration: none;
+  transition: font-weight 0.3s ease;
+}
+.assignment-download-link:hover{
+  font-weight: 650;
+}
+/* ---------- SUBMIT ASSIGNMENT PAGE ---------- */
+.submit-assignment-div{
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 1em;
+  background-color:#f7f3e4;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15%;
+}
+.std-submit-msg-area{
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.error-msg{
+  color: rgb(192, 30, 62);
+}
+.upload-form {
+  max-width: 550px; /* width of the bar */
+  margin: 40px auto; /* centers the form horizontally */
+}
+
+.file-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* includes padding in the width calculation */
+
+}
+
+#file-name {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-btn {
+  background-color: #06435f;
+  color: aliceblue;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 6px 11px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+#paper_file {
+  display: none;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+.form-buttons button{
+  background-color: #06435f;
+  color: aliceblue;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 6px 11px;
+  transition: background-color 0.3s ease;
+  border: none;
+  font-size: 15px;
+}
+.form-buttons button:hover, .file-btn:hover{
+background-color: #16516c;
+}
+
+/* ---------- VIEW EVALUATION PAGE ---------- */
+.view-eval-page-div {
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  padding: 1em;
+  background-color: #faf7e9ff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  color:#003f5c;
+    
+}
+.eval-date p{
+  margin: 0;
+  font-size: small;
+}
+
+.evaluation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: small;
+    border: 1px solid #003366;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+  border: none; /* removes boxy borders */
+  border-bottom: 1px solid #003366; /* dark blue line under each row */
+  text-align: center;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  font-size: small;
+  white-space: nowrap;
+}
+
+.evaluation-table th {
+  text-align: left;
+  width: 23%;
+  border-right: 1px solid #003366;
+  padding: 10px 0 10px 15px;
+}
+.evaluation-table td {
+  text-align: left;
+  padding: 10px;
+}
+.status-style {
+  padding: 5px 10px;
+  color: aliceblue;
+  background-color: #003f5c;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0%;
+}
+.evaluation-table td a {
+    color: #007bff;
+    text-decoration: none;
+    transition: font-weight 0.3s ease;
+}
+
+.evaluation-table td a:hover {
+   font-weight: 650;
+}
+
+
+
+/* ---------- SELECTED ASSIGNMENT DETAILS --------- */ 
+.assignment-details-container{ 
+    background-color:#faf7e9ff; 
+    padding: 2em; 
+    border-radius: 3px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+} 
+.assignment-details-table 
+{ 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); 
+    font-family: "open sans", 'Courier New', Courier, monospace; 
+    font-size: 15px; 
+}
+.assignment-details-table thead{ 
+    color:aliceblue; 
+    text-align: left; } 
+.assignment-details-table th, .assignment-details-table td 
+{ padding: 12px 16px; 
+    border-bottom: 1px solid #ddd; }
+.assignment-details-table th:nth-child(odd) 
+{ 
+ background-color: #003f5c; 
+  font-weight: normal; 
+} 
+.assignment-details-table th:nth-child(even) { 
+    background-color: #073950;
+     font-weight: normal; 
+    }
+.assignment-details-table td:nth-child(odd) { 
+    background-color: white;
+ } 
+ .assignment-details-table td:nth-child(even) { 
+    background-color: rgb(245, 243, 243); 
+ }
+
+/* ---------- RESPONSIVE DESIGN FOR STUDENT DASHBOARD ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  /* Sidebar shrinks */
+  .student-sidebar {
+    width: 180px;
+  }
+  .std-main-page {
+    margin-left: 180px;
+    padding: 1em;
+  }
+
+  /* Dashboard sections stack vertically */
+  .top-elements {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Tables scroll horizontally */
+  .student-submission-table-sec table,
+  .available-assignments-table-sec table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+  .student-submission-table-sec th,
+  .student-submission-table-sec td,
+  .available-assignments-table-sec th,
+  .available-assignments-table-sec td {
+    padding: 8px 10px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  /* Sidebar becomes top nav */
+  .student-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .student-profile-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+  }
+
+  .student-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+
+  .student-logo-div {
+    position: static;
+    transform: none;
+    margin-top: 1em;
+  }
+  .student-logo-div img {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Main page fills full width */
+  .std-main-page {
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  /* Notifications and options stack */
+  .top-elements {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Tables become card-style */
+  .student-submission-table-sec table thead,
+  .available-assignments-table-sec table thead {
+    display: none;
+  }
+  .student-submission-table-sec table,
+  .student-submission-table-sec tbody,
+  .student-submission-table-sec tr,
+  .student-submission-table-sec td,
+  .available-assignments-table-sec table,
+  .available-assignments-table-sec tbody,
+  .available-assignments-table-sec tr,
+  .available-assignments-table-sec td {
+    display: block;
+    width: 100%;
+  }
+  .student-submission-table-sec tr,
+  .available-assignments-table-sec tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0.75em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .student-submission-table-sec td,
+  .available-assignments-table-sec td {
+    padding: 0.5em 0;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    word-break: break-word;
+  }
+  .student-submission-table-sec td::before,
+  .available-assignments-table-sec td::before {
+    display: block;
+    font-weight: bold;
+    color: #003f5c;
+    margin-bottom: 0.25em;
+  }
+
+  /* Labels for student submission table */
+  .student-submission-table-sec td:nth-child(1)::before { content: "No."; }
+  .student-submission-table-sec td:nth-child(2)::before { content: "Title"; }
+  .student-submission-table-sec td:nth-child(3)::before { content: "Start Date"; }
+  .student-submission-table-sec td:nth-child(4)::before { content: "Due Date"; }
+  .student-submission-table-sec td:nth-child(5)::before { content: "Submit"; }
+  .student-submission-table-sec td:nth-child(6)::before { content: "Status"; }
+
+  /* Labels for available assignments table */
+  .available-assignments-table-sec td:nth-child(1)::before { content: "No."; }
+  .available-assignments-table-sec td:nth-child(2)::before { content: "Title"; }
+  .available-assignments-table-sec td:nth-child(3)::before { content: "Start Date"; }
+  .available-assignments-table-sec td:nth-child(4)::before { content: "Due Date"; }
+  .available-assignments-table-sec td:nth-child(5)::before { content: "Submit"; }
+  .available-assignments-table-sec td:nth-child(6)::before { content: "Status"; }
+
+  /* Buttons inside cards */
+  .student-submission-table-sec .submit-btn,
+  .available-assignments-table-sec .submit-btn {
+    display: inline-block;
+    margin-top: 0.5em;
+    min-width: 100px;
+    text-align: center;
+  }
+}
+
+/* ---------- RESPONSIVE DESIGN FOR ASSIGNMENT DETAILS ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .assignment-details-container {
+    padding: 1.5em;
+    margin: 1em;
+  }
+
+  .assignment-details-table {
+    display: block;
+    overflow-x: auto;   /* allow horizontal scroll */
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .assignment-details-table th,
+  .assignment-details-table td {
+    padding: 10px 12px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .assignment-details-container {
+    padding: 1em;
+    margin: 0.5em;
+  }
+
+  .assignment-details-container h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .assignment-details-container p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Hide table headers */
+  .assignment-details-table thead {
+    display: none;
+  }
+
+  /* Convert rows into cards */
+  .assignment-details-table,
+  .assignment-details-table tbody,
+  .assignment-details-table tr,
+  .assignment-details-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .assignment-details-table tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0.75em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .assignment-details-table td {
+    padding: 0.5em 0;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  /* Labels above values */
+  .assignment-details-table td::before {
+    display: block;
+    font-weight: bold;
+    color: #003f5c;
+    margin-bottom: 0.25em;
+  }
+
+  /* Column labels */
+  .assignment-details-table td:nth-child(1)::before { content: "Version"; }
+  .assignment-details-table td:nth-child(2)::before { content: "Submission Date"; }
+  .assignment-details-table td:nth-child(3)::before { content: "Status"; }
+  .assignment-details-table td:nth-child(4)::before { content: "Feedback"; }
+  .assignment-details-table td:nth-child(5)::before { content: "Evaluation Date"; }
+
+  /* Status badge styling */
+  .status-badge {
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .status-submitted { color: rgb(13, 125, 13); }
+  .status-pending { color: rgb(183, 22, 54); }
+}

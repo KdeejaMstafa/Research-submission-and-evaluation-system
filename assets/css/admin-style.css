@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Carattere&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shrikhand&family=Sofadi+One&display=swap');
+body{
+  margin: 0;
+  padding: 0; 
+ background-color: #f0ebdc;
+}
+
+/*---------- ADMIN NAVIGATION BAR STYLES ----------*/
+.admin-navbar{
+  background-color: #003f5c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  color: aliceblue;
+  font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.admin-navbar .admin-nav-links ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.admin-navbar .admin-nav-links ul li {
+  margin: 15px 0;
+}
+
+.admin-navbar .admin-nav-links ul li a {
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+.admin-navbar .admin-nav-links ul li a:hover {
+color:#ede7d1;
+transition: color 0.3s ease-in;
+}
+.admin-navbar .admin-profile-div img{
+    margin: 0px;
+    padding: 0.5em;
+    width: 65px;
+    height: 65px;
+    background-color: #103546;
+    border-radius: 100%;
+}
+.admin-navbar .admin-profile-div div a{
+  font-size: small;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.admin-navbar .admin-profile-div div a:hover {
+color:#ede7d1;
+transition: color 0.3s ease-in;
+}
+.admin-profile-div{
+  display: flex;
+  align-items: center; /* vertically center the items */
+  gap: 2px; /* space between image and link */
+  padding: 15px 20px;
+
+}
+.logo-div {
+  position: absolute;
+  bottom: 10px; /* distance from bottom edge */
+  left: 50%;
+  transform: translateX(-50%); /* centers horizontally */
+  text-align: center;
+}
+
+.logo-div img {
+  width: 150px;
+  height: auto;
+  opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- ADMIN MAIN BODY + NOTIFICATION BOX + SYSTEM OVERVIEW ------------ */
+
+.admin-main-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 220px;
+  padding: 2em;
+  box-sizing: border-box;
+  position: relative;
+}
+.admin-main-body h3{
+font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+color: #003f5c;
+font-size: normal;
+margin-bottom: 2px;
+}
+.admin-notif-div h2, .admin-stats-div h2{
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+  color: #003f5c;
+}
+.admin-notif-div {
+  flex: 3;
+  background-color: #488aa8;
+  margin-bottom: 2em;
+  padding: 1em;
+  color: #003f5c;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+.admin-notif-div .notif-list{
+ font-family: "open sans",'Courier New', Courier, monospace;
+ padding: 1em;
+}
+.admin-dashboard {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+.admin-stats-div{
+  flex:2;
+  font-family: "open sans",'Courier New', Courier, monospace;
+}
+.admin-stats-div section{
+  background-color: #faf7e9;
+  margin-bottom: 1em;
+  padding: 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  font-size: 15px;
+}
+.stat-box{
+  background-color: #003f5c;
+  color: aliceblue;
+  border-radius: 3px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.stat-box:hover{
+background-color: #13526f;
+}
+.recent-regs-count{
+  list-style: none;
+  padding: 0;
+  padding: 10px;
+}
+
+/* ---------- MANAGE USERS PAGE STYLES ------------ */
+.pending-users-div-el, .approved-users-div-el{
+  font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.pending-users-div-el h2, 
+.approved-users-div-el h2{
+  text-align: center;
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+  color: #00324A;
+}
+.approved-users-div-el table, 
+.pending-users-div-el table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+/* Table headers */
+table thead {
+  color:aliceblue;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+}
+
+table button, .edit-user-main button { /* this styling is also used for the buttons in edit-user page. */
+  padding: 6px 10px;
+  margin-right: 5px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #154f8e;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+table button:hover, .edit-user-main button:hover { /* this styling is also used for the buttons in edit-user page. */
+  background-color: #0056b3;
+}
+#user-del-btn{
+  background-color: darkred;
+}
+#user-del-btn:hover{
+  background-color:rgb(174, 33, 33);
+  transition: background-color 0.2s ease;
+}
+.alert-box {
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+  color: #003f5c;
+  font-weight: 500;
+}
+/* Header row */
+.pending-user-table th:nth-child(odd), .approved-user-table th:nth-child(odd){
+  background-color: #003f5c; /* lighter blue */
+  font-weight: normal;
+}
+.pending-user-table th:nth-child(even), .approved-user-table th:nth-child(even){
+  background-color: #073950; /* darker blue */
+  font-weight: normal;
+}
+
+/* Column striping for data cells */
+.pending-user-table td:nth-child(odd), .approved-user-table td:nth-child(odd){
+   background-color: white;   /* lighter shade */
+}
+.pending-user-table td:nth-child(even), .approved-user-table td:nth-child(even){
+ background-color: rgb(245, 243, 243);   /* dark shade */
+}
+/* ---------- EDIT USERS PAGE STYLES ------------ */
+.edit-user-form{
+  font-family: "open sans", 'Courier New', Courier, monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color:white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.edit-user-main h2{
+  text-align: center;
+  font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+}
+.edit-user-main form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.edit-user-main label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+}
+
+.edit-user-main input,
+.edit-user-main select {
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.form-btns{
+   margin-top: 2em;
+}
+.form-btns button {
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* --------- MONITOR SUBMISSIONS --------- */
+.monitor-subs-admin{
+font-family: "open sans", 'Courier New', Courier, monospace;
+}
+.summary-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 15px;                             /* spacing between items */
+  margin-bottom: 15px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+}
+.summary-item {
+  font-weight: normal;
+  text-align: center;    /* center text in each box */
+  padding: 8px;
+  background: #003f5c;   /* dark blue bar */
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.summary-item.total { font-weight: bold; }
+
+.monitor-subs-admin h3{
+font-family: "Libre Baskerville", serif, 'Courier New', Courier, monospace;
+color: #00324A;
+}
+.submission-table {
+  font-size: 14px;
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 3px; 
+  overflow: hidden;            /* keeps child backgrounds inside rounded corners */
+}
+
+/* Header row */
+.submission-table th:nth-child(odd) {
+  background-color: #003f5c; /* lighter blue */
+  font-weight: normal;
+}
+.submission-table th:nth-child(even) {
+  background-color: #073950; /* darker blue */
+  font-weight: normal;
+}
+
+/* Column striping for data cells */
+.submission-table td:nth-child(odd) {
+   background-color: white;   /* lighter shade */
+}
+.submission-table td:nth-child(even) {
+ background-color: rgb(245, 243, 243);   /* dark shade */
+}
+
+.submission-table th, 
+.submission-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* ---------- RESPONSIVE DESIGN FOR ADMIN INTERFACE ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  /* Sidebar shrinks */
+  .admin-navbar {
+    width: 180px;
+  }
+  .admin-main-body {
+    margin-left: 180px;
+    padding: 1.5em;
+  }
+  .admin-dashboard {
+    flex-direction: column;   /* stack notifications and stats vertically */
+  }
+  .admin-notif-div,
+  .admin-stats-div {
+    width: 100%;
+  }
+  .logo-div img {
+    width: 120px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  /* Sidebar becomes top nav */
+  .admin-navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .admin-profile-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+  }
+
+  .admin-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .admin-nav-links ul li {
+    margin: 0.5em 0;
+  }
+
+  .logo-div {
+    position: static;
+    transform: none;
+    margin-top: 1em;
+  }
+  .logo-div img {
+    width: 100px;
+  }
+
+  /* Main body fills full width */
+  .admin-main-body {
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  /* Dashboard stacks vertically */
+  .admin-dashboard {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .admin-notif-div,
+  .admin-stats-div {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .admin-stats-div section {
+    font-size: 14px;
+    padding: 0.75em;
+  }
+
+  .stat-box {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* ---------- UNIVERSAL RESPONSIVE TABLE DESIGN ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  table {
+    font-size: 0.9rem;
+  }
+  table th, table td {
+    padding: 10px 12px;
+  }
+  /* Allow horizontal scroll if too many columns */
+  .pending-users-div-el table,
+  .approved-users-div-el table,
+  .submission-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  /* Hide table headers */
+  table thead {
+    display: none;
+  }
+
+  /* Convert rows into cards */
+  table, 
+  table tbody, 
+  table tr, 
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0.75em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  table td {
+    padding: 0.5em 0;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  /* Labels above values */
+  table td::before {
+    display: block;
+    font-weight: bold;
+    color: #003f5c;
+    margin-bottom: 0.25em;
+  }
+
+  /* Generic labels for common tables */
+  .pending-user-table td:nth-child(1)::before { content: "Username"; }
+  .pending-user-table td:nth-child(2)::before { content: "Email"; }
+  .pending-user-table td:nth-child(3)::before { content: "Role"; }
+  .pending-user-table td:nth-child(4)::before { content: "Status"; }
+
+  .approved-user-table td:nth-child(1)::before { content: "Username"; }
+  .approved-user-table td:nth-child(2)::before { content: "Email"; }
+  .approved-user-table td:nth-child(3)::before { content: "Role"; }
+  .approved-user-table td:nth-child(4)::before { content: "Approved Date"; }
+
+  .submission-table td:nth-child(1)::before { content: "Title"; }
+  .submission-table td:nth-child(2)::before { content: "Student"; }
+  .submission-table td:nth-child(3)::before { content: "Supervisor"; }
+  .submission-table td:nth-child(4)::before { content: "Status"; }
+  .submission-table td:nth-child(5)::before { content: "Date"; }
+
+  /* Buttons inside cards */
+  table button {
+    margin-top: 0.5em;
+    width: auto;
+    display: inline-block;
+  }
+}
