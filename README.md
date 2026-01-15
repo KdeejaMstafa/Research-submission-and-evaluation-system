@@ -36,6 +36,23 @@ The system replaces traditional paper-based workflows with a structured, transpa
 1. Student → Submit papers, track status, view feedback, download commented files.
 2. Faculty/Supervisor → Create assignments, evaluate submissions, upload feedback, publish accepted papers.
 3. Admin → Manage users, monitor submissions, generate reports, oversee system activity.
+### Landing Page  
+<img width="1903" height="871" alt="image" src="https://github.com/user-attachments/assets/983c5b10-93c8-46d2-bbe5-f8c2b9c8e952" />  
+
+### Signup Page  
+<img width="1842" height="825" alt="image" src="https://github.com/user-attachments/assets/c764c117-0b35-482e-a325-107840b19be4" /> 
+
+### Student Interface  
+<img width="1892" height="888" alt="image" src="https://github.com/user-attachments/assets/b13ddb51-dace-4bb1-8b47-0ed11638e679" />  
+
+### Supervisor Interface  
+<img width="1887" height="891" alt="image" src="https://github.com/user-attachments/assets/b28bb7d2-19f3-4e32-ab9f-6b8c4be263ce" />
+
+### Admin Interface  
+<img width="1890" height="881" alt="image" src="https://github.com/user-attachments/assets/09edd973-05f7-4a42-aaaa-fe5cecc93fe7" />
+
+### User profile  
+<img width="1897" height="888" alt="image" src="https://github.com/user-attachments/assets/070cc2ca-308d-4056-b355-d887d7f8d8c8" />
 
 ### Tools Used
 PHP, HTML, CSS, JavaScript, JQuery, MySQL.
