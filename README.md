@@ -33,9 +33,9 @@ The system replaces traditional paper-based workflows with a structured, transpa
   
 
 ### Roles and Capabilities
-1. Student → Submit papers, track status, view feedback, download commented files.
-2. Faculty/Supervisor → Create assignments, evaluate submissions, upload feedback, publish accepted papers.
-3. Admin → Manage users, monitor submissions, generate reports, oversee system activity.
+1. **Student** → Submit papers, track status, view feedback, download commented files.
+2. **Faculty/Supervisor** → Create assignments, evaluate submissions, upload feedback, publish accepted papers.
+3. **Admin** → Manage users, monitor submissions, generate reports, oversee system activity.
 ### Landing Page  
 <img width="1903" height="871" alt="image" src="https://github.com/user-attachments/assets/983c5b10-93c8-46d2-bbe5-f8c2b9c8e952" />  
 
@@ -54,7 +54,24 @@ The system replaces traditional paper-based workflows with a structured, transpa
 ### User profile  
 <img width="1897" height="888" alt="image" src="https://github.com/user-attachments/assets/070cc2ca-308d-4056-b355-d887d7f8d8c8" />
 
+___
 ### Tools Used
 PHP, HTML, CSS, JavaScript, JQuery, MySQL.
+___
 
+### Security Practices Applied 
+In developing my project, I incorporated several practices inspired by the OWASP Top 10 (2025) to strengthen the overall security of the system.
 
+- To address **Broken Access Control (A01)**, almost all pages in the application perform server‑side role verification, ensuring that only authorized users can access protected resources, with unauthorized users redirected to the login page.
+- To reduce the risk of **Injection (A05)**, the system uses secure MySQL prepared statements along with htmlspecialchars() when outputting data to prevent cross‑site scripting.
+- For **Authentication Failures (A07)**, user passwords are stored using secure hashing rather than plain text, improving credential protection.
+- The system also includes structured logging and admin notifications for technical issues, aligning with **Security Logging and Alerting Failures (A09)** by ensuring that errors are captured.
+- I implemented proper exception handling, preventing unexpected failures from exposing sensitive information or disrupting system behavior, which supports the goals of **Mishandling of Exceptional Conditions (A10)**.
+
+### Future Improvements
+Although I ensured the project meets its core requirements, I don't plan to stop just there. To continue enhancing the security, usability, and maintainability of the system, here is a list of future enhancements I would like to implement:  
+
+▸ Add Multi‑Factor Authentication (MFA) to strengthen user identity verification.  
+▸ Maintain version documentation for all tools, libraries, and Composer packages to ensure the system stays updated and secure.  
+▸ Implement login attempt logging to help detect brute‑force attacks or suspicious authentication patterns.  
+▸ Introduce a real‑time chat feature between supervisors and students to improve communication within the system.
